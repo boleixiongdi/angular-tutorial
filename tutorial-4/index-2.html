@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>  
+<html ng-app="MyApp">  
+<head>  
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>  
+    <script src="http://cdn.bootcss.com/angular.js/1.5.6/angular.min.js"></script>
+     <script src="./script-2.js"></script>
+    
+</head>  
+<body>  
+    <form name="myForm">
+    <div class="form-group">
+        <label for="">User name:</label>
+        <input type="text" class="form-control" name="userName" ensure-unique="username" ng-model="user.name" required>
+        <span class="error" ng-show="myForm.userName.$error.unique">Required!</span>
+    </div>
+    <div class="form-group">
+        <label for="">Last name:</label>
+        <input type="text" class="form-control" name="lastName" ng-model="user.last" ng-minlength="3" ng-maxlength="10">
+        <span class="error" ng-show="myForm.lastName.$error.minlength">Too short!</span>
+        <span class="error" ng-show="myForm.lastName.$error.maxlength">Too long!</span>
+    </div>
+    <div class="form-group">
+        <label for="">User age:</label>
+        <input type="text" class="form-control" name="userAge" ng-model="user.age" even required>
+        <span class="error" ng-show="myForm.userAge.$error.even">数字必须是偶数</span>
+    </div>
+</form>
+</body>  
+</html> 
