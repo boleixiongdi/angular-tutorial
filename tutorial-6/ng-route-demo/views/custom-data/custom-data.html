@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="page-header">
+        <h1>Attaching Custom Data</h1>
+        <p class="lead">CustomDataController Attached with $route injected</p>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-5">
+            <h4>route.current.user:</h4>
+            <pre>{{ dataCtrl.userData | json }}</pre>
+        </div>
+
+        <div class="col-lg-6 col-lg-offset-1">
+            <h4>route.routes:</h4>
+            <pre >{{ dataCtrl.routeData | json }}</pre>
+        </div>
+    </div>
+
+</div>
